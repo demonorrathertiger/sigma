@@ -1,4 +1,27 @@
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>sigma</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="sigma">
+    <link rel="apple-touch-icon" href="icon.png">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" data-presets="react,typescript">
+        
+        // ブラウザ専用のReact呼び出し方（importの代わり）
+        const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+        /* ==========================================
+           ↓↓↓ ここにあなたのコードを貼り付ける ↓↓↓
+           ========================================== */
 
 // ── PWA + ピンチ禁止 メタタグ注入 ───────────────────────────
 function usePWAMeta() {
@@ -1118,3 +1141,15 @@ export default function App() {
     </div>
   );
 }
+
+
+        /* ==========================================
+           ↑↑↑ ここまで ↑↑↑
+           ========================================== */
+
+        // アプリを画面に表示する命令
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
